@@ -11,61 +11,90 @@
         <h1>Luis Moreno</h1>
     </header>
     <main>
-        <!-- Row of Projects -->
+        <h2 class="section-header">Personal Projects</h2>
         <section class="project-row">
-            <div class="section-header">
-                <h2>Personal Projects</h2>
-            </div>
-            <div class="project-cards-wrapper">
-                <div class="project-card">
-                    <!-- Project Image or GIF -->
-                    <div class="placeholder-img"></div>
-                    <!-- Project Details (Name, Description, etc.) -->
-                    <div class="project-info">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1.</p>
-                    </div>
+            
+            <div class="project-card1 fade">
+                <div class="placeholder-img"></div>
+                <div class="project-info">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="placeholder-img"></div>
-                    <div class="project-info">
-                        <h3>Project 2</h3>
-                        <p>Description of Project 2.</p>
-                    </div>
+            <div class="project-card1 fade">
+                <div class="placeholder-img"></div>
+                <div class="project-info">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
                 </div>
             </div>
-            <!-- Add more project cards as needed -->
+
+            <div class="project-card1 fade">
+                <div class="placeholder-img"></div>
+                <div class="project-info">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095</a>
 
         </section>
-        <section class="project-row">
-            <div class="section-header">
-                <h2>School Projects</h2>
-            </div>
-            <div class="project-cards-wrapper">
-                <div class="project-card">
-                    <!-- Project Image or GIF -->
-                    <div class="placeholder-img"></div>
-                    <!-- Project Details (Name, Description, etc.) -->
-                    <div class="project-info">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1.</p>
-                    </div>
-                </div>
+        <br>
 
-                <div class="project-card">
-                    <div class="placeholder-img"></div>
-                    <div class="project-info">
-                        <h3>Project 2</h3>
-                        <p>Description of Project 2.</p>
-                    </div>
+        <div style="text-align: center">
+            <span class="dot" onlick="currentSlide(1, 0)"></span>
+            <span class="dot" onlick="currentSlide(2, 0)"></span>
+            <span class="dot" onlick="currentSlide(3, 0)"></span>
+        </div>
+
+        <h2 class="section-header">Personal Projects</h2>
+        <section class="project-row">
+            
+            <div class="project-card2 fade">
+                <div class="placeholder-img"></div>
+                <div class="project-info">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
                 </div>
             </div>
+
+            <div class="project-card2 fade">
+                <div class="placeholder-img"></div>
+                <div class="project-info">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                </div>
+            </div>
+
+            <div class="project-card2 fade">
+                <div class="placeholder-img"></div>
+                <div class="project-info">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095</a>
+
         </section>
+        <br>
+
+        <div style="text-align: center">
+            <span class="dot" onlick="currentSlide(1, 1)"></span>
+            <span class="dot" onlick="currentSlide(2, 1)"></span>
+            <span class="dot" onlick="currentSlide(3, 1)"></span>
+        </div>
+
     </main>
 
     <footer>
         <p>&copy; 2023 Luis Moreno. All rights reserved.</p>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
