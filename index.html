@@ -7,92 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Luis Moreno</h1>
-    </header>
     <main>
-        <h2 class="section-header">Personal Projects</h2>
-        <section class="project-row">
+
+        <div class="projects-wrapper">
             
-            <div class="project-card1 fade">
-                <div class="placeholder-img"></div>
-                <div class="project-info">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1.</p>
-                </div>
+            <div class="project-container">
+                <img src="images/folder-icon.png" alt="folder" class="folder-icon">
+                <div class="folder-label">Project 1</div>
             </div>
 
-            <div class="project-card1 fade">
-                <div class="placeholder-img"></div>
-                <div class="project-info">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2.</p>
-                </div>
+            <div class="project-container">
+                <img src="images/folder-icon.png" alt="folder" class="folder-icon">
+                <div class="folder-label">Project 2</div>
             </div>
 
-            <div class="project-card1 fade">
-                <div class="placeholder-img"></div>
-                <div class="project-info">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 3.</p>
-                </div>
+            <div class="project-container">
+                <img src="images/folder-icon.png" alt="folder" class="folder-icon">
+                <div class="folder-label">Project 3</div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1, 0)">&#10094</a>
-            <a class="next" onclick="plusSlides(1, 0)">&#10095</a>
-
-        </section>
-        <br>
-
-        <div style="text-align: center">
-            <span class="dot" onlick="currentSlide(1, 0)"></span>
-            <span class="dot" onlick="currentSlide(2, 0)"></span>
-            <span class="dot" onlick="currentSlide(3, 0)"></span>
-        </div>
-
-        <h2 class="section-header">Personal Projects</h2>
-        <section class="project-row">
-            
-            <div class="project-card2 fade">
-                <div class="placeholder-img"></div>
-                <div class="project-info">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1.</p>
-                </div>
-            </div>
-
-            <div class="project-card2 fade">
-                <div class="placeholder-img"></div>
-                <div class="project-info">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2.</p>
-                </div>
-            </div>
-
-            <div class="project-card2 fade">
-                <div class="placeholder-img"></div>
-                <div class="project-info">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 3.</p>
-                </div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1, 1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1, 1)">&#10095</a>
-
-        </section>
-        <br>
-
-        <div style="text-align: center">
-            <span class="dot" onlick="currentSlide(1, 1)"></span>
-            <span class="dot" onlick="currentSlide(2, 1)"></span>
-            <span class="dot" onlick="currentSlide(3, 1)"></span>
         </div>
 
     </main>
 
     <footer>
-        <p>&copy; 2023 Luis Moreno. All rights reserved.</p>
+
+        <ul class="links" style="display: none">
+            <li>LinkedIn</li>
+            <li>GitHub</li>
+        </ul>
+
+        <span id="links-button">Luis Moreno</span>
+        <span>&copy; 2023. All rights reserved.</span>
+        
     </footer>
 
     <script src="index.js"></script>
