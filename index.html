@@ -12,6 +12,13 @@
             max-height: 80px;
             margin-right: 10px;
         }
+
+        @media (min-width: 768px) {
+            .navbar-nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
     </style>
 
     <title>Luis Moreno - Portfolio Site</title>
@@ -20,7 +27,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-md flex-md-nowrap flex-column">
             <div class="container-fluid">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav nav-fill">
                     <li class="nav-item">
                         <a class="navbar-brand">
                             <img src="images/headshot.jpeg" alt="profile picture" width="50"/>
@@ -34,10 +41,10 @@
                         <a class="nav-link" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GitHub</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/dewisbrown">GitHub</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">LinkedIn</a>
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/luis-mo-reno/">LinkedIn</a>
                     </li>
                 </ul>
             </div>
