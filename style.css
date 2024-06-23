@@ -45,7 +45,6 @@ body, html {
     border: 1px solid #000;
     position: absolute;
     display: none;
-    flex-direction: column;
 }
 
 .window-menubar {
