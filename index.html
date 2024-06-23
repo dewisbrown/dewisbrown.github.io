@@ -28,7 +28,7 @@
                 <img src="images/folder.png"/>
                 <span>Misc</span>
             </div>
-            <div class="folder" onclick="openWindow('misc')">
+            <div class="folder" onclick="openWindow('bio')">
                 <img src="images/file.png"/>
                 <span>Bio</span>
             </div>
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div id="python" class="window">
+        <div id="web" class="window">
             <div class="window-menubar">
                 <div class="window-controls">
                     <button onclick="closeWindow('web')">X</button>
@@ -86,6 +86,21 @@
                     <button onclick="closeWindow('misc')">X</button>
                     <button onclick="minimizeWindow('misc')">-</button>
                     <span>Misc Projects</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="file">Project 1</div>
+                <div class="file">Project 2</div>
+                <div class="file">Project 3</div>
+            </div>
+        </div>
+
+        <div id="bio" class="window">
+            <div class="window-menubar">
+                <div class="window-controls">
+                    <button onclick="closeWindow('bio')">X</button>
+                    <button onclick="minimizeWindow('bio')">-</button>
+                    <span>About Me</span>
                 </div>
             </div>
             <div class="window-content">
