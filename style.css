@@ -15,8 +15,8 @@ body, html {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-wrap: wrap;
     position: relative;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -44,6 +44,8 @@ body, html {
     background-color: #fff;
     border: 1px solid #000;
     position: absolute;
+    top: 10%;
+    left: 10%;
     display: none;
 }
 
