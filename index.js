@@ -4,7 +4,7 @@ document.querySelectorAll('.window').forEach(win => {
         const onMouseMove = (e) => {
             if (!isMove) return;
             win.style.left = `${e.clientX - win.offsetWidth / 2}px`;
-            win.style.top = `${e.clientY - win.querySelector('.window-header').offsetWidth / 2}px`;
+            win.style.top = `${e.clientY - win.querySelector('.window-menubar').offsetWidth / 2}px`;
         };
         const onMouseUp = () => {
             isMove = false;
@@ -21,7 +21,7 @@ document.querySelectorAll('.window').forEach(win => {
 
 function openWindow(id) {
     const win = document.getElementById(id);
-    win.style.display = 'flex';
+    win.style.display = 'block';
     const taskbarEntry = document.getElementById(`taskbar-${id}`);
     if (taskbarEntry) taskbarEntry.remove();
 }
