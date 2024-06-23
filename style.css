@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#desktop {
+    width: 100%;
+    height: calc(100% - 40px);
+    background-color: #6CB4E6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 20px;
+}
+
+.folder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    gap: 5px;
+}
+
+.folder img {
+    height: 100%;
+    width: 100%;
+}
+
+.window {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+}
+
+.window-menubar {
+    background-color: #00008b;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: move;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.window-controls button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.window-content {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#taskbar {
+    width: 100%;
+    height: 40px;
+    background-color: #305168c1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+#taskbar-windows {
+    display: flex;
+    gap: 10px;
+}
+
+.taskbar-window {
+    background-color: #555;
+    padding: 5px 10px;
+    cursor: pointer;
+}
