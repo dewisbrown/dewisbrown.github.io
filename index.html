@@ -11,6 +11,79 @@
         <title>Luis Moreno - Dev</title>
     </head>
     <body>
+        <div id="desktop">
+            <div class="folder" onclick="openWindow('python')">Python</div>
+            <div class="folder" onclick="openWindow('java')">Java</div>
+            <div class="folder" onclick="openWindow('web')">Web</div>
+            <div class="folder" onclick="openWindow('misc')">Misc</div>
+        </div>
+
+        <!-- Folder Windows -->
+        <div id="python" class="window">
+            <div class="window-menubar">
+                <div class="window-controls">
+                    <button onclick="closeWindow('python')">X</button>
+                    <button onclick="minimizeWindow('python')">-</button>
+                    <span>Python Projects</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="file">Project 1</div>
+                <div class="file">Project 2</div>
+                <div class="file">Project 3</div>
+            </div>
+        </div>
+
+        <div id="java" class="window">
+            <div class="window-menubar">
+                <div class="window-controls">
+                    <button onclick="closeWindow('java')">X</button>
+                    <button onclick="minimizeWindow('java')">-</button>
+                    <span>Java Projects</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="file">Project 1</div>
+                <div class="file">Project 2</div>
+                <div class="file">Project 3</div>
+            </div>
+        </div>
+
+        <div id="python" class="window">
+            <div class="window-menubar">
+                <div class="window-controls">
+                    <button onclick="closeWindow('web')">X</button>
+                    <button onclick="minimizeWindow('web')">-</button>
+                    <span>Web Projects</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="file">Project 1</div>
+                <div class="file">Project 2</div>
+                <div class="file">Project 3</div>
+            </div>
+        </div>
+
+        <div id="misc" class="window">
+            <div class="window-menubar">
+                <div class="window-controls">
+                    <button onclick="closeWindow('misc')">X</button>
+                    <button onclick="minimizeWindow('misc')">-</button>
+                    <span>Misc Projects</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="file">Project 1</div>
+                <div class="file">Project 2</div>
+                <div class="file">Project 3</div>
+            </div>
+        </div>
         
+        <!-- Bottom Taskbar -->
+        <div id="taskbar">
+            <div id="taskbar-windows"></div>
+        </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
