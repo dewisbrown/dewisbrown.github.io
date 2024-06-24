@@ -40,6 +40,8 @@ function openWindow(id) {
 function closeWindow(id) {
     const win = document.getElementById(id);
     win.style.display = 'none';
+    win.style.top = '10%';
+    win.style.left = '10%';
     const taskbarEntry = document.querySelector(`#taskbar-windows #taskbar-${id}`);
     if (taskbarEntry) taskbarEntry.remove();
 }
