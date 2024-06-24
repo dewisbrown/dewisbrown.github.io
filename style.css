@@ -21,8 +21,8 @@ body, html {
 }
 
 .folder {
-    width: 50px;
-    height: 50px;
+    width: 10%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,12 +30,14 @@ body, html {
     margin: 10px;
     cursor: pointer;
     text-align: center;
+    border: 1px solid black;
     gap: 5px;
 }
 
 .folder img {
     height: 100%;
     width: 100%;
+    border: 1px solid black;
 }
 
 .window {
@@ -43,9 +45,10 @@ body, html {
     height: 200px;
     background-color: #fff;
     border: 1px solid #000;
-    position: absolute;
-    top: 10%;
-    left: 10%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
 }
 
