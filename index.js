@@ -23,9 +23,10 @@ document.querySelectorAll('.window').forEach(win => {
 
 function openWindow(id) {
     const win = document.getElementById(id);
-    win.style.display = 'block';
     const taskbarWindows = document.getElementById('taskbar-windows');
-    let taskbarEntry = document.getElementById(`taskbar-${id}`);
+    let taskbarEntry = document.querySelector(`#taskbar-windows #taskbar-${id}`);
+    
+    // Create taskbar entry and add to taskbar-windows
     if (!taskbarEntry) {
         taskbarEntry = document.createElement('div');
         taskbarEntry.id = `taskbar-${id}`;
@@ -34,7 +35,27 @@ function openWindow(id) {
         taskbarEntry.onclick = () => openWindow(id);
         taskbarWindows.appendChild(taskbarEntry);
     }
-    taskbarEntry.classList.add('active');
+
+    const taskbarRect = taskbarEntry.getBoundingClientRect();
+    const winRect = win.getBoundingClientRect();
+
+    // Calculate translation values
+    const translateX = taskbarRect.left - winRect.left;
+    const translateY = taskbarRect.top - winRect.top;
+
+    win.style.display = 'block';
+    win.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    win.style.transition = 'transform 0.2s ease';
+
+    requestAnimationFrame(() => {
+        win.style.transform = 'translate(0, 0)';
+    });
+
+    win.addEventListener('transitioned', () => {
+        win.style.transform = 'none';
+        win.style.transition = 'none';
+        taskbarEntry.classList.add('active');
+    }, { once: true });
 }
 
 function closeWindow(id) {
@@ -48,7 +69,21 @@ function closeWindow(id) {
 
 function minimizeWindow(id) {
     const win = document.getElementById(id);
-    win.style.display = 'none';
-    const taskbarEntry = document.querySelector(`#taskbar-windows #taskbar-${id}`)
-    if (taskbarEntry) taskbarEntry.classList.remove('active');
+    const taskbarEntry = document.querySelector(`#taskbar-windows #taskbar-${id}`);
+    const winRect = win.getBoundingClientRect();
+    const taskbarRect = taskbarEntry.getBoundingClientRect();
+
+    // Calculate translation values
+    const translateX = taskbarRect.left - winRect.left
+    const translateY = taskbarRect.top - winRect.top;
+
+    win.style.transition = 'transform 0.2s ease';
+    win.style.transform = `translate(${translateX}px, ${translateY}px)`;
+
+    win.addEventListener('transitionend', () => {
+        win.style.transform = 'none';
+        win.style.transition = 'none';
+        win.style.display = 'none';
+        taskbarEntry.classList.remove('active');
+    }, { once: true });
 }
