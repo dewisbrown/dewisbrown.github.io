@@ -1,3 +1,5 @@
+let highestZIndex = 1;
+
 document.querySelectorAll('.window').forEach(win => {
     let offsetX, offsetY;
     
@@ -8,6 +10,8 @@ document.querySelectorAll('.window').forEach(win => {
             document.addEventListener('mousemove', onMouseMove);
             document.addEventListener('mouseup', onMouseUp);
         }
+        // Bring the window to the front
+        bringToFront(win);
     });
 
     const onMouseMove = (e) => {
@@ -20,6 +24,11 @@ document.querySelectorAll('.window').forEach(win => {
         document.removeEventListener('mouseup', onMouseUp);
     };
 });
+
+function bringToFront(win) {
+    highestZIndex++;
+    win.style.zIndex = highestZIndex;
+}
 
 function openWindow(id) {
     const win = document.getElementById(id);
@@ -55,6 +64,7 @@ function openWindow(id) {
         win.style.transform = 'none';
         win.style.transition = 'none';
         taskbarEntry.classList.add('active');
+        bringToFront(win); // Bring window to front when opening
     }, { once: true });
 }
 
@@ -87,3 +97,11 @@ function minimizeWindow(id) {
         taskbarEntry.classList.remove('active');
     }, { once: true });
 }
+
+function toggleStartMenu() {
+    const startMenu = document.getElementById('start-menu');
+    startMenu.style.display = startMenu.style.display === 'none' || startMenu.style.display === '' ? 'block' : 'none';
+}
+
+// Hide start menu from the start
+document.getElementById('start-menu').style.display = 'none';
