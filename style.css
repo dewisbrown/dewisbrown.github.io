@@ -89,6 +89,18 @@ body, html {
     bottom: 0;
 }
 
+#start-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#start-icon img {
+    width: 40px;
+    height: 40px;
+}
+
 #taskbar-windows {
     display: flex;
     gap: 10px;
@@ -98,4 +110,19 @@ body, html {
     background-color: #555;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+#start-menu {
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: none;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+#start-menu-content {
+    padding: 10px;
 }
