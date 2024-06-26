@@ -29,11 +29,6 @@
                 <img src="images/folder.png"/>
                 <span>Misc</span>
             </div>
-            <!-- Thinking about moving this to bottom taskbar -->
-            <!-- <div class="folder" onclick="openWindow('bio')">
-                <img src="images/file.png"/>
-                <span>Bio</span>
-            </div> -->
         </div>
 
         <!-- Folder Windows -->
@@ -114,7 +109,20 @@
         
         <!-- Bottom Taskbar -->
         <div id="taskbar">
+            <div id="start-icon">
+                <img src="images/file.png" alt="Start Icon" onclick="toggleStartMenu()">
+            </div>
             <div id="taskbar-windows"></div>
+        </div>
+
+        <div id="start-menu">
+            <div class="start-menu-content">
+                <!-- Start Menu Items -->
+                <p>Item 1</p>
+                <p>Item 2</p>
+                <p>Item 3</p>
+                <p>Item 4</p>
+            </div>
         </div>
 
         <script src="index.js"></script>
