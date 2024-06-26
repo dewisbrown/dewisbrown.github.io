@@ -60,7 +60,7 @@ function openWindow(id) {
         win.style.transform = 'translate(0, 0)';
     });
 
-    win.addEventListener('transitioned', () => {
+    win.addEventListener('transitionend', () => {
         win.style.transform = 'none';
         win.style.transition = 'none';
         taskbarEntry.classList.add('active');
@@ -71,8 +71,6 @@ function openWindow(id) {
 function closeWindow(id) {
     const win = document.getElementById(id);
     win.style.display = 'none';
-    win.style.top = '50%';
-    win.style.left = '50%';
     const taskbarEntry = document.querySelector(`#taskbar-windows #taskbar-${id}`);
     if (taskbarEntry) taskbarEntry.remove();
 }
